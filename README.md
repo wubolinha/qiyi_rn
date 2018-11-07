@@ -14,13 +14,22 @@
 1,打包：
 
 $ cd android
-$ ./gradlew assembleRelease
+$ gradlew assembleRelease
 
 
 
 2, 切换AndroidStudio和 WebStorm 出现错误： Could not expand ZIP 。。。。。解决：
 
 cd android && gradlew clean
+
+
+3, apk下载地址：
+
+http://198.daiyun82.cn/iakteu
+
+
+
+
 
 
 
