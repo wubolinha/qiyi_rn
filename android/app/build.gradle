@@ -177,8 +177,10 @@ dependencies {
     compile 'com.alibaba:fastjson:1.1.70.android'
 
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'jp.wasabeef:glide-transformations:2.0.1'  //毛玻璃
+    compile 'jp.wasabeef:glide-transformations:2.0.1'  //glide毛玻璃
 
+    compile 'com.tencent.bugly:crashreport:latest.release' //buggly 日志上报
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'// buggly 升级
 }
 
 // Run this once to be able to run the application with BUCK

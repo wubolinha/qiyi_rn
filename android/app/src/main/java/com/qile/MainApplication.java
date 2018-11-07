@@ -17,6 +17,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.crashreport.CrashReport;
 import com.ximalaya.ting.android.opensdk.datatrasfer.CommonRequest;
 
 import java.util.Arrays;
@@ -65,6 +67,9 @@ public class MainApplication extends Application implements ReactApplication {
         instance =this;
         CommonRequest.getInstanse().init(this, "80cf03ac6f0600a59aadff406fcfd496");
         CommonRequest.getInstanse().setDefaultPagesize(50); //返回的每页的条数
+
+        Bugly.init(getApplicationContext(), "862bc752-bd7d-4c69-bb9d-402abf36e161", true);
+       // CrashReport.initCrashReport(getApplicationContext(), "862bc752-bd7d-4c69-bb9d-402abf36e161", true);
     }
 
     public static MainApplication instance;
