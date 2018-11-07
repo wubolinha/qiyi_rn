@@ -90,7 +90,7 @@ export class Page4 extends Component {
                     onEndReachedThreshold={0}    // 当列表被滚动到距离内容多少时调用  onEndReached
                     numColumns={2}            // 多少列
 
-                >  
+                >
                 </FlatList>
             </View>
         );
