@@ -14,7 +14,7 @@ import jp.wasabeef.glide.transformations.BlurTransformation;
 
 public class BlurViewManger extends SimpleViewManager<BlurView> {
 
-    private static final String REACT_CLASS = "BlurView";
+    private static final String REACT_CLASS = "BlurImageView";
     private BlurView blurView = null;
     private ThemedReactContext reactContext;
 

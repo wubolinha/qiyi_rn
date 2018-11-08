@@ -16,7 +16,7 @@ import {CallbackTool, ToastShow} from "../../Model/TingModel";
 import {BlurView} from 'react-native-blur';
 import StoryItem from "../../Component/StoryItem";
 import AudioItem from "../../Component/AudioItem";
-
+import  BlurImageViewComponent from "../../Component/BlurComponent"
 
 var storyData = [];
 
@@ -80,15 +80,17 @@ export default class XmlyAudioList extends Component {
         return (
             <View style={{flex: 1}}>
 
-
-
-
-
-                <Image
-                    source={{uri: this.state.coverUrlLarge}}
+                {/*毛玻璃效果*/}
+                <BlurImageViewComponent
                     style={styles.imageStyle}
-
+                    imgSource={ this.state.coverUrlLarge }
                 />
+
+                {/*<Image*/}
+                    {/*source={{uri: this.state.coverUrlLarge}}*/}
+                    {/*style={styles.imageStyle}*/}
+
+                {/*/>*/}
 
                 <Image
                     source={{uri: this.state.coverUrlLarge}}
