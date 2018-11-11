@@ -24,9 +24,9 @@ cd android && gradlew assembleRelease
 cd android && gradlew clean
 
 
-3, apk下载地址：
+3, apk存放目录:  qile\apk下载 
 
-http://198.daiyun82.cn/iakteu
+
 
 
 
