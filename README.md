@@ -15,6 +15,8 @@
 $ cd android
 $ gradlew assembleRelease
 
+也可以：
+cd android && gradlew assembleRelease
 
 
 2, 切换AndroidStudio和 WebStorm 出现错误： Could not expand ZIP 。。。。。解决：
