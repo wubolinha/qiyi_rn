@@ -1,0 +1,45 @@
+
+1,如何桥接原生View？
+参考 ：  https://blog.csdn.net/u013718120/article/details/79978723
+
+
+2，在 reactnative中 如何实现  java 和 js 通信
+
+
+
+3，redux 的用法
+
+
+
+4，组件的生命周期
+
+
+
+5  组件的属性和状态
+
+props：属性，是在父组件中指定的，指定后在组件的生命周期中不再改变
+state：状态，对于需要改变的数据，使用 state  ，一般来说，需要在 constructor 中初始化 state ，
+       需要修改时调用 setState 方法
+
+
+
+6  组件通信方式。
+
+
+
+
+
+7 redux中 ， Action 的 flux 标准定义一般是怎样的
+
+action 一般具有下面四个属性：
+type：类型
+payload：载荷
+error：是否出错
+meta：可选参数
+
+
+
+
+
+
+

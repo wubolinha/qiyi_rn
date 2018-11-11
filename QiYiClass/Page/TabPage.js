@@ -8,8 +8,9 @@ import {Page2 } from './PageStory';
 import PageVideoList from "./PageVideoList";
 import {XmlyPageMain} from "./Xmly/XmlyPageMain";
 import PageHot from "./PageHot";
+import {Dimensions} from "react-native";
 
-
+const {width, height} = Dimensions.get('window')
 export  const TabPageNav  = createMaterialTopTabNavigator (
     {
         Page_5:{
@@ -40,67 +41,41 @@ export  const TabPageNav  = createMaterialTopTabNavigator (
 
     {
         tabBarOptions: {
-
-            //当前选中的tab bar的文本颜色和图标颜色
             activeTintColor: '#4BC1D2',
-            //当前未选中的tab bar的文本颜色和图标颜色
             inactiveTintColor: '#000',
-            //是否显示tab bar的图标，默认是false
-            showIcon: false,
-            //showLabel - 是否显示tab bar的文本，默认是true
-            showLabel: true,
-            //是否将文本转换为大小，默认是true
+            showIcon: true,
+            showLabel: false,
             upperCaseLabel: false,
-            //material design中的波纹颜色(仅支持Android >= 5.0)
-            pressColor: '#788493',
-            //按下tab bar时的不透明度(仅支持iOS和Android < 5.0).
+
             pressOpacity: 0.8,
-            //tab bar的样式
             style: {
-                // backgroundColor: 'transparent',
+                backgroundColor: '#FFEFD5',   // tarbar 背景色，透明无效
                 paddingBottom: 0,
-                paddingTop:0,
-               // borderTopColor: 'transparent',
-
-                left: 0,
-                right: 0,
-                bottom: 0,
-
+                borderTopWidth: 0.5,
+                borderTopColor: '#ccc',
             },
-            indicatorStyle: {
-                height: 0  // 如TabBar下面显示有一条线，可以设高度为0后隐藏
+            labelStyle: {
+                fontSize: 12,
+                margin: 1
             },
             tabStyle: {
+                backgroundColor: '#00FF0000',   // tarbar 背景色，透明有效
+                height: 48,
 
-                height: 48
             },
             iconStyle: {
-
-                width:100,
+                backgroundColor: '#00FF0000',   // tarbar 背景色，透明有效
+                width:width/4,
                 height:48,
-                padding:0       //Padding 0 here
-            },
-
-            //tab bar的文本样式
-            labelStyle: {
-                alignSelf:'center',
-                fontSize: 15,
 
             },
-            //tab 页指示符的样式 (tab页下面的一条线).
-            indicatorStyle: {height: 0},
+            indicatorStyle: { height: 0 }, //android 中TabBar下面会显示一条线，高度设为 0 后就不显示线了
         },
-        //tab bar的位置, 可选值： 'top' or 'bottom'
         tabBarPosition: 'bottom',
-        //是否允许滑动切换tab页
         swipeEnabled: true,
-        //是否在切换tab页时使用动画
-        animationEnabled: true,
-        //是否懒加载
+        animationEnabled: false,
         lazy: true,
-        //返回按钮是否会导致tab切换到初始tab页？ 如果是，则设置为initialRoute，否则为none。 缺省为initialRoute。
         backBehavior: 'none',
-
     }
 
 );

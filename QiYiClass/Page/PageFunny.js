@@ -12,6 +12,7 @@ import {
 import AliyunOSS from "aliyun-oss-react-native";
 import {OSSRead_jsonResolv, urlprefix} from "../Model/OssRead";
 import {CachedImage} from "react-native-img-cache";
+import {globalstyles} from "../Constances";
 
 var name = '趣味';
 var tag = '更多';
@@ -21,6 +22,8 @@ var funData_video = [];
 var funData_image = [];
 var headurl = "https://childrenedu.oss-cn-shenzhen.aliyuncs.com/"
 
+var tabPic_Press='../../images/xuexitiandi_pre_04.png'
+var tabPic_Nor='../../images/xuexitiandi_nor.png'
 
 export class Page4 extends Component {
 
@@ -28,8 +31,22 @@ export class Page4 extends Component {
     static navigationOptions = {
         tabBarLabel: name,
         tabBarIcon: ({focused}) => {
+            if(focused){
+                return (
+                    <View >
+
+                        <Image  style={globalstyles.tabImage_Press}   source={require(tabPic_Press)}/>
+
+                        <Text style={globalstyles.tabText_Press} >  { name} </Text>
+                    </View>
+
+                );
+            }
             return (
-                <Image style={styles.tabBarIcon} source={require('../../images/shuxue_nor.png')}/>
+                <View >
+                    <Image    style={globalstyles.tabImage_Nor}     source={require(tabPic_Nor)}/>
+                    <Text    style={globalstyles.tabText_Nor} >  { name} </Text>
+                </View>
             );
         },
     };

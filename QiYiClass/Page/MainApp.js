@@ -18,6 +18,7 @@ import VideoPlayScreen from "./VideoPlayScreen";
 import XmlyAudioList from "./Xmly/XmlyAudioList"
 import  {Page4} from  './PageFunny'
 import FunnyVideoPlayScreen from "./FunnyVideoPlayScreen";
+import XmlyAudioPlay from "./Xmly/XmlyAudioPlay";
 
 // defalut configraiton
 const configuration = {
@@ -41,6 +42,10 @@ const MainApp = StackNavigator(
         AudioList:{
             screen: XmlyAudioList,
         },
+        AudioPlay:{
+            screen: XmlyAudioPlay,
+        },
+
         PlayList:{
             screen:PageVideoList,
         },

@@ -12,6 +12,7 @@ import {
 
 } from 'react-native';
 import XmlyAudiolList from "../Page/Xmly/XmlyAudioList";
+import {urlprefix} from "../Model/OssRead";
 
 // var StoryProps = {
 //     albumTitle: "朵狸讲故事",
@@ -45,7 +46,9 @@ export default class AudioItem extends Component {
 
             <TouchableOpacity   // TouchableOpacity用于使视图正确响应触摸的包装器
                 activeOpacity={0.5}   // 设置TouchableHighlight被按下时的不透明度,
-                onPress={this.itemClick.bind(this)}
+                onPress={this.itemClick.bind(this, this.props.audioData.all
+                    //    [this.props.audioData.index]
+                )}
             >
 
                 <View style={styles.itemContainer}>
@@ -57,7 +60,7 @@ export default class AudioItem extends Component {
 
                         <View style={styles.itemPlayCount}>
                             <Text>  {'播放量: ' + this.props.audioData.playCount}  </Text>
-                            <Text>  {'点赞数: ' + this.props.audioData.favoriteCount }  </Text>
+                            <Text>  {'点赞数: ' + this.props.audioData.all['favoriteCount']}  </Text>
 
                         </View>
 
@@ -68,14 +71,19 @@ export default class AudioItem extends Component {
 
     }
 
-    //点击列表点击每一行
-    itemClick() {
+    //点击列表点击每一行   //    [this.props.audioData.index]
+    itemClick(data) {
 
-        DeviceEventEmitter.emit('jump', 'AudioList', {
-            id: this.props.audioData.id,
-            cover: this.props.audioData.coverUrlMiddle
+        //  DeviceEventEmitter.emit('jump', 'AudioPlay' , data );
+        DeviceEventEmitter.emit('jump', 'AudioPlay', {
+            list: this.props.audioData.alllist,  //传入整个list
+            index: this.props.audioData.index    //  当前选项的下标
         });
-        //  alert('点击了 '+ this.props.audioData.id  );
+
+        // var itemdata= this.props.audioData.alllist[ this.props.audioData.index ];
+        // console.log( " "   );
+        // console.log(  '点击了 '+ JSON.stringify( itemdata["value"] ) );
+        // console.log( JSON.stringify(   data  )    );
     }
 
 
@@ -132,7 +140,7 @@ const styles = StyleSheet.create({
 
     itemPlayCount: {
         flex: 1,
-          flexDirection: 'row',
+        flexDirection: 'row',
         marginTop: 1,
     },
 

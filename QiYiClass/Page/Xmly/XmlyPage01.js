@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+
 import {
     View,
     Text,
@@ -9,8 +9,15 @@ import {
     TouchableOpacity,
     Dimensions,
     DeviceEventEmitter,
+    findNodeHandle,
 
 } from 'react-native';
+
+
+
+
+import React, {Component} from 'react';
+
 import {CallbackTool, ToastShow} from "../../Model/TingModel";
 import {  xy_renderItem ,xy_separator} from "./PageHelp"
 import StoryItem from "../../Component/StoryItem";

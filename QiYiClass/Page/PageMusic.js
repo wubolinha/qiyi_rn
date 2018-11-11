@@ -12,6 +12,7 @@ import {
 import AliyunOSS from "aliyun-oss-react-native";
 import {OSSRead_jsonResolv} from "../Model/OssRead";
 import {CachedImage} from "react-native-img-cache";
+import {globalstyles} from "../Constances";
 
 
 const {width,height}=Dimensions.get('window')
@@ -20,6 +21,8 @@ var name =  '课堂';
 var tag =  '故事|歌乐|课堂';
 var data = [];
 
+var tabPic_Press='../../images/yuwen_pre_04.png'
+var tabPic_Nor='../../images/yuwen_nor.png'
 
 export  class Page3 extends Component {
 
@@ -27,9 +30,21 @@ export  class Page3 extends Component {
     static navigationOptions = {
         tabBarLabel: name,
         tabBarIcon: ({focused}) => {
+            if(focused){
+                return (
+                    <View >
 
+                        <Image  style={globalstyles.tabImage_Press}   source={require(tabPic_Press)}/>
+                        <Text style={globalstyles.tabText_Press} >  { name} </Text>
+                    </View>
+
+                );
+            }
             return (
-                <Image style={styles.tabBarIcon} source={require('../../images/shuxue_nor.png')}/>
+                <View >
+                    <Image    style={globalstyles.tabImage_Nor}     source={require(tabPic_Nor)}/>
+                    <Text    style={globalstyles.tabText_Nor} >  { name} </Text>
+                </View>
             );
         },
     };
@@ -128,7 +143,7 @@ export  class Page3 extends Component {
     itemClick(item, index) {
 
         DeviceEventEmitter.emit('jump', 'PlayList',item.item);
-       // alert('点击了第' + index + '项， 名称为：' + item.item.title.describe );
+      //  alert('点击了第' + index + '项， 名称为：' + item.item.title.describe );
     }
 
 

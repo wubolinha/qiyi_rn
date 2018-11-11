@@ -9,7 +9,7 @@ import {
     TouchableOpacity,
     Dimensions,
     DeviceEventEmitter,
-    findNodeHandle,
+    findNodeHandle, Alert,
 
 } from 'react-native';
 import {CallbackTool, ToastShow} from "../../Model/TingModel";
@@ -17,6 +17,7 @@ import {BlurView} from 'react-native-blur';
 import StoryItem from "../../Component/StoryItem";
 import AudioItem from "../../Component/AudioItem";
 import  BlurImageViewComponent from "../../Component/BlurComponent"
+import {urlprefix} from "../../Model/OssRead";
 
 var storyData = [];
 
@@ -134,8 +135,9 @@ export default class XmlyAudioList extends Component {
     introItemClick() {
 
           alert(this.state.albumIntro +""  );
-    }
 
+//          Alert.alert(this.state.albumIntro +""  )
+    }
     _renderItem = (item) => {
 
         // console.log("播放id： "+   story["dataId"] );
@@ -146,6 +148,8 @@ export default class XmlyAudioList extends Component {
         // console.log("点赞：  " +  story["favoriteCount"]   );
         // console.log("播放次数：  " +  story["playCount"]   );
         //
+       // console.log("当前index：  "+  item.item.key );
+
         var thisItemProps = {
             albumTitle: item.item.value['trackTitle'],
 
@@ -158,6 +162,13 @@ export default class XmlyAudioList extends Component {
             coverUrlMiddle: item.item.value['validCover'],
 
             id: item.item.value['dataId'],
+
+            all:item.item.value,
+
+            index:item.item.key,
+
+            alllist:storyData,
+
         };
 
         return (

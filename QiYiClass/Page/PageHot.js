@@ -13,10 +13,14 @@ import {
 } from 'react-native';
 import AliyunOSS from "aliyun-oss-react-native";
 import {OSSRead_jsonResolv} from "../Model/OssRead";
+import {globalstyles} from "../Constances";
 
 var name = '热点';
 var tag = '热点话题';
 var storyData = [];
+
+var tabPic_Press='../../images/yingyu_pre_04.png'
+var tabPic_Nor='../../images/yingyu_nor.png'
 
 export default class PageHot extends React.Component {
 
@@ -25,9 +29,21 @@ export default class PageHot extends React.Component {
     static navigationOptions = {
         tabBarLabel: name,
         tabBarIcon: ({focused}) => {
+            if(focused){
+                return (
+                    <View >
 
+                        <Image  style={globalstyles.tabImage_Press}   source={require(tabPic_Press)}/>
+                        <Text style={globalstyles.tabText_Press} >  { name} </Text>
+                    </View>
+
+                );
+            }
             return (
-                <Image style={styles.tabBarIcon} source={require('../../images/shuxue_nor.png')}/>
+                <View >
+                    <Image    style={globalstyles.tabImage_Nor}     source={require(tabPic_Nor)}/>
+                    <Text    style={globalstyles.tabText_Nor} >  { name} </Text>
+                </View>
             );
         },
     };

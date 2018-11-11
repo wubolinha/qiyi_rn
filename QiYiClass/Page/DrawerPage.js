@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {
+    View,
     StyleSheet,
     Image,
     Button, DeviceEventEmitter,
@@ -7,6 +8,7 @@ import {
 import
 {DrawerNavigator, DrawerItems} from 'react-navigation';
 import  {TabPageNav} from "./TabPage";
+import VideoPlayScreen from "./VideoPlayScreen";
 
 
 class Title1 extends React.Component {
@@ -23,7 +25,7 @@ class Title1 extends React.Component {
     // 处理 DeviceEventEmitter 事件     DeviceEventEmitter.emit('jump', 'PlayList',item.item);
     componentDidMount() {
         this.deEmitter = DeviceEventEmitter.addListener('jump', (page,itemData) => {
-           //  alert('收到：' + page+'   '+itemData  );
+          //  alert('收到：' + page+'   '+itemData   );
             this.props.navigation.navigate(page, {
                 data:itemData
             }   )
@@ -38,7 +40,9 @@ class Title1 extends React.Component {
 
     render() {
         return (
+
             <TabPageNav/>
+
         )
     }
 
@@ -56,8 +60,6 @@ class Title2 extends React.Component {
             />
         ),
     };
-
-
 
 
     render() {
