@@ -3,7 +3,7 @@
 -------
 
 
-![image](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/yanshi1.gif)
+![image](https://github.com/wubolinha/qiyi_rn/blob/master/show.gif)
 
 
 用户定位是10岁以下儿童和家长，设计了四大模块：
