@@ -2,9 +2,8 @@
 奇艺课堂 React Native 版本
 -------
 
-[![Watch the video](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/yanshi1.gif)](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/yanshi.mp4)
-
-
+ 
+![image](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/yanshi1.gif)
 
 
 用户定位是10岁以下儿童和家长，设计了四大模块：
