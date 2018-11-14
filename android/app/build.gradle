@@ -134,6 +134,12 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = [ 'libs']
+        }
+    }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->

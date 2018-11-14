@@ -40,7 +40,8 @@ export default class XmlyAudioList extends Component {
 
     //将要被挂载
     componentDidMount() {
-
+        storyData = [];
+        this.setState(this.state); // 刷新
         var {params} = this.props.navigation.state;
         this.state.id = params.data.id + "";
 
@@ -50,9 +51,6 @@ export default class XmlyAudioList extends Component {
             this.state.albumTitle = obj['albumTitle'];
             this.state.albumIntro = obj['albumIntro'];
             //   this.state.coverUrlLarge=obj['coverUrlLarge'];
-
-            storyData = [];
-            this.setState(this.state); // 刷新
 
             var array = obj['tracks']
             for (var index in array) {

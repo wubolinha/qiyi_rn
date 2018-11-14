@@ -27,9 +27,13 @@ public class TingModule  extends ReactContextBaseJavaModule {
 
 
     ReactApplicationContext reactContext;
+    XmlyMediaPlayer player;
+
     public TingModule(ReactApplicationContext reactContext) {
         super(reactContext);
          this.reactContext=reactContext;
+        player=new XmlyMediaPlayer(reactContext);
+
     }
 
     @Override
@@ -43,6 +47,7 @@ public class TingModule  extends ReactContextBaseJavaModule {
     }
 
 
+
     @ReactMethod
     public void getCallbackData(String  message, String  tagname, Callback callback){
 
@@ -51,6 +56,18 @@ public class TingModule  extends ReactContextBaseJavaModule {
         }
         else if( message.equals("getTracks")){
             XmlyTool.instance.getTracks(tagname,callback);
+        }
+        else if( message.equals("xmlyplay")){
+            player.resolveJson( tagname);
+        }
+        else if( message.equals("xmlypause")){  //暂停
+            player.pause();
+        }
+        else if( message.equals("xmlystop")){
+            player.destory();
+        }
+        else if( message.equals("xmlyinit")){
+            player.init();
         }
         else {
             callback.invoke(  message );

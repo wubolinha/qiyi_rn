@@ -77,7 +77,8 @@ export default class AudioItem extends Component {
         //  DeviceEventEmitter.emit('jump', 'AudioPlay' , data );
         DeviceEventEmitter.emit('jump', 'AudioPlay', {
             list: this.props.audioData.alllist,  //传入整个list
-            index: this.props.audioData.index    //  当前选项的下标
+            index: this.props.audioData.index,    //  当前选项的下标
+            albumId:this.props.audioData.id,     // 专辑id
         });
 
         // var itemdata= this.props.audioData.alllist[ this.props.audioData.index ];
