@@ -1,5 +1,13 @@
 
-奇艺课堂 React Native 版本,用户定位是10岁以下儿童和家长，设计了四大模块：
+奇艺课堂 React Native 版本
+-------
+
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/vt5fpE0bzSY)
+
+
+
+
+用户定位是10岁以下儿童和家长，设计了四大模块：
 -------
 * 主页 ：集成了喜马拉雅FM的儿童模块，即：推荐，故事，儿歌，科普，国学，英语，哄睡，母婴。
 
