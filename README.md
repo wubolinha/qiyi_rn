@@ -2,7 +2,7 @@
 奇艺课堂 React Native 版本
 -------
 
-[![Watch the video](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/main.jpg)](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/yanshi.mp4)
+[![Watch the video](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/yanshi1.gif)](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/yanshi.mp4)
 
 
 
