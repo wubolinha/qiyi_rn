@@ -2,7 +2,7 @@
 奇艺课堂 React Native 版本
 -------
 
-[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/vt5fpE0bzSY)
+[![Watch the video](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/main.jpg)](https://shareworld.oss-cn-shenzhen.aliyuncs.com/github/yanshi.mp4)
 
 
 
